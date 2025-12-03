@@ -10,4 +10,5 @@ additional bathymetries in
 
 ftp://ftp.ifremer.fr/ifremer/ww3/COURS/WAVE_DATA/BATHY
 
-
+General scheme of execution of this tools:
+![Image](ww3-tools.png)
