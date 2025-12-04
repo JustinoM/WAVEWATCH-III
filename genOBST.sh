@@ -6,7 +6,10 @@
 #
 
 # Where is create_obstr.m and the rest of the matlabs provided by GRIDGEN
-MATLAB_progs="/data/lustre/WW3/GRIDGEN/bin"
+MATLAB_progs="/data/lustre/WW3/TUTORIAL_GRIDGEN/bin"
+
+# Matlab executable
+MATLAB=matlab
 
 # Input files
 filex="CATSEA_x_4.inp"
@@ -28,7 +31,6 @@ if [ ! -f ${filex} ]; then
 	exit
 fi
 
-
 cat ${filex} | sed 's|  |,|g' > /tmp/sx
 cat ${filey} | sed 's|  |,|g' > /tmp/sy
 cat ${filem} | sed 's|  |,|g' > /tmp/mask
@@ -44,7 +46,7 @@ csvwrite('/tmp/sx.dat',Sx);
 csvwrite('/tmp/sy.dat',Sy);
 EOF
 
-matlab  -nodisplay -nodesktop -nosplash -nojvm -r "try, script$$;  catch, disp('failed execution'), end, quit"
+${MATLAB} -nodisplay -nodesktop -nosplash -nojvm -r "try, script$$;  catch, disp('failed execution'), end, quit"
 
 rm /tmp/sx /tmp/sy /tmp/mask script$$.m 
 if [ ! -f /tmp/sx.dat ] || [ ! -f /tmp/sy.dat ]; then
@@ -57,9 +59,9 @@ sed -i 's|,|  |g' /tmp/sx.dat
 sed -i -e 's|^| |g' /tmp/sx.dat
 sed -i 's|,|  |g' /tmp/sy.dat
 sed -i -e 's|^| |g' /tmp/sy.dat
-cat sx.dat > ${fileo}
+cat /tmp/sx.dat > ${fileo}
 echo "" >> ${fileo}
-cat sy.dat >> ${fileo}
+cat /tmp/sy.dat >> ${fileo}
 
 echo "File ${fileo} has been created"
 
