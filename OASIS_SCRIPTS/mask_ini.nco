@@ -1,0 +1,5 @@
+CROCO_EOCE($eta_rho, $xi_rho)=mask_rho($eta_rho, $xi_rho)*CROCO_EOCE($eta_rho, $xi_rho);
+CROCO_NOCE($eta_rho, $xi_rho)=mask_rho($eta_rho, $xi_rho)*CROCO_NOCE($eta_rho, $xi_rho);
+CROCO_SST($eta_rho, $xi_rho)=mask_rho($eta_rho, $xi_rho)*CROCO_SST($eta_rho, $xi_rho);
+CROCO_SSH($eta_rho, $xi_rho)=mask_rho($eta_rho, $xi_rho)*CROCO_SSH($eta_rho, $xi_rho);
+
