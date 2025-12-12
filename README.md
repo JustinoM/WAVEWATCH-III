@@ -12,3 +12,5 @@ ftp://ftp.ifremer.fr/ifremer/ww3/COURS/WAVE_DATA/BATHY
 
 General scheme of execution of this tools:
 ![Image](ww3-tools.png)
+
+An additional tool named oasisCalm.py has added to create restart calm conditions for OASIS coupler.
