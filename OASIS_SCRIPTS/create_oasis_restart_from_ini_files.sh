@@ -63,8 +63,7 @@ fi
 filein=$1
 fileout=$2
 fileangle=$3
-echo $SCRIPTDIR
-exit
+
 # ------------------------------------------------------------------------------ #
 echo '*******************************************************************'
 echo 'START script create_oasis_restart_from_ini_files.sh'
