@@ -14,4 +14,5 @@ General scheme of execution of these tools:
 ![Image](ww3-tools.png)
 
 An additional tool, named oasisCalm.py, has been added to create a restart calm conditions file for the OASIS coupler.
-The OASIS_SCRIPTS folder contains files that should be copied to the "croco/SCRIPTS/SCRIPTS_COUPLING/SCRIPTS_TOOLBOX/OASIS_SCRIPTS" folder that comes with the CROCO distribution
+
+The OASIS_SCRIPTS folder contains files that should be copied to the "croco/SCRIPTS/SCRIPTS_COUPLING/SCRIPTS_TOOLBOX/OASIS_SCRIPTS" folder that comes with the CROCO distribution. Remember to provide execution permissions to sh scripts (chmod 755)
