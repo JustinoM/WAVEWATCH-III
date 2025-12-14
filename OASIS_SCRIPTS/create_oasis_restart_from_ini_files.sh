@@ -119,7 +119,7 @@ for k in `seq 0 $(( ${lengthvar} - 1))` ; do
 
     # Extract or compute var
     echo '---> Extract or compute '$var
-    ${SCRIPTDIR}/OASIS_SCRIPTS/WW3_tools_from_croco.sh $filetmp0 $filetmp $var $timerange 
+    ${SCRIPTDIR}/WW3_tools_from_croco.sh $filetmp0 $filetmp $var $timerange 
     # Remove time dimension
     echo '---> Remove time dimension...'
     ncwa -O -a $dimtime $filetmp $filetmp
